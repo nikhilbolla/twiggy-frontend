@@ -32,12 +32,12 @@ const HomePage = () => {
             <img src={landingImage}  alt="phones" />
             <div className="flex flex-col items-center justify-center gap-4 text-center">
                 <span className="font-bold text-3xl tracking-tighter">
-                    Put your Restuarant Online and Earn !
+                    Put your Restaurant Online and Earn !
                 </span>
                 <span className="">
-                    You can add your restuarant and let customers order food online !
+                    You can add your restaurant and let customers order food online !
                 </span>
-                <Button onClick={handleButtonClick}>Manage My Resturant<ArrowRight size={15} className="ms-2" /></Button>
+                <Button onClick={handleButtonClick}>Manage My restaurant<ArrowRight size={15} className="ms-2" /></Button>
             </div>
             
         </div>
