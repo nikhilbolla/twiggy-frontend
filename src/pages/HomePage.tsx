@@ -27,6 +27,7 @@ const HomePage = () => {
             </h1>
             <span className="text-xl">Food is just a click away!</span>
             <SearchBar placeHolder="Search by City or Town" onSubmit={handleSearchSubmit}/>
+            <p> Note: Please enter 'Karimnagar' in the search bar when looking for restaurants, as I have created a couple of dummy restaurants for testing purposes.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-5 ">
             <img src={landingImage}  alt="phones" />

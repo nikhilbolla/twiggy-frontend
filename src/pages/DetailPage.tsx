@@ -5,7 +5,7 @@ import RestaurantInfo from "@/components/RestaurantInfo";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardFooter } from "@/components/ui/card";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MenuItem as MenuItemType } from "../types";
 import CheckoutButton from "@/components/CheckoutButton";
 import { UserFormData } from "@/forms/user-profile-form/UserProfileForm";
@@ -19,6 +19,7 @@ export type CartItem = {
 };
 
 const DetailPage = () => {
+  const navigate = useNavigate()
   const { restaurantId } = useParams();
   const [totalPrice, setTotalPrice] = useState("");
   const { restaurant, isLoading } = useGetRestaurant(restaurantId);
@@ -107,7 +108,8 @@ const DetailPage = () => {
     };
 
     const data = await createCheckoutSession(checkoutData);
-    window.location.href = data.url;
+    console.log(data)
+    navigate(data.url)
   };
 
   if (isLoading || !restaurant) {
