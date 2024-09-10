@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 
 
-export const AuthCallbackPage = () => {
+const AuthCallbackPage = () => {
     const navigate = useNavigate()
     const {user} = useAuth0();
     const {createUser} = useCreateMyUser();
@@ -23,3 +23,5 @@ export const AuthCallbackPage = () => {
     return <>Loading...</>
 
 }
+
+export default AuthCallbackPage
